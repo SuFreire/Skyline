@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline - Empreendimento Exclusivo em Odivelas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%); }
+        .whatsapp-btn { background: #25D366; }
+        .whatsapp-btn:hover { background: #128C7E; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+<section class="relative">
+    <img src="https://ik.imagekit.io/ij9blp5q7/Foto%20Skyline.jpg?updatedAt=1755195590866" alt="Skyline Empreendimento" class="w-full h-auto">
+    <div class="absolute inset-0 hero-gradient flex items-center justify-center">
+        <div class="text-center text-white px-6 py-12">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">SKYLINE</h1>
+            <p class="text-xl md:text-2xl font-light mb-8">Empreendimento Exclusivo em Odivelas</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://www.remax.pt/pt/imoveis/venda-apartamento-t3-lisboa-odivelas/122481502-18/6wkMj2W82QuU59UqeqSlM-F-UNjOWvCH" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Ver Andar Modelo
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=351962323123" target="_blank" class="whatsapp-btn text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Descubra o Skyline</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Um empreendimento exclusivo localizado em Granjas Novas, Odivelas, que promete redefinir o conceito de habitação moderna e sustentável.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Com 48 frações distribuídas por 6 edifícios de apenas 4 pisos, oferece um ambiente tranquilo e reservado, ideal para quem valoriza privacidade e conforto.
+                    </p>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-2">Conclusão Prevista</h3>
+                        <p class="text-blue-700">Segundo trimestre de 2026</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://ik.imagekit.io/ij9blp5q7/IMG_20250810_201918.jpg?updatedAt=1754853611005" alt="Skyline Projeto" class="w-full rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Unidades Disponíveis</h2>
+            <p class="text-lg text-gray-600 mb-8">Segue tabela com as unidades disponíveis e preços das mesmas</p>
+            <div class="bg-white rounded-lg shadow-xl p-8 inline-block">
+                <img src="https://ik.imagekit.io/ij9blp5q7/Tabela%202%20(2).jpg?updatedAt=1755203090882" alt="Tabela de Preços Skyline" class="w-full rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Conheça o Projeto</h2>
+                <p class="text-lg text-gray-600">Veja o vídeo do empreendimento Skyline</p>
+            </div>
+            <div class="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
+                <iframe 
+                    src="https://www.youtube.com/embed/dZeuVTd4olQ" 
+                    class="w-full h-full" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Interessado?</h2>
+                <p class="text-xl text-gray-300">Entre em contato conosco para mais informações</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-6">Formulário de Contato</h3>
+                    <form class="space-y-6" id="leadForm">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Nome:</label>
+                            <input type="text" name="nome" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Telefone:</label>
+                            <input type="tel" name="telefone" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email:</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white">
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Options -->
+                <div class="space-y-8">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold mb-6">Outras Formas de Contato</h3>
+                    </div>
+                    
+                    <a href="https://api.whatsapp.com/send?phone=351962323123" target="_blank" class="block whatsapp-btn text-white p-6 rounded-lg font-semibold text-center">
+                        <span class="text-xl">WhatsApp</span>
+                        <p class="text-green-100">+351 962 323 123</p>
+                    </a>
+
+                    <a href="https://www.remax.pt/pt/imoveis/venda-apartamento-t3-lisboa-odivelas/122481502-18/6wkMj2W82QuU59UqeqSlM-F-UNjOWvCH" target="_blank" id="apartamento" class="block bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-lg font-semibold text-center">
+                        <span class="text-xl">Ver Andar Modelo</span>
+                        <p class="text-blue-100">Visite a página do imóvel</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-4">SKYLINE</h3>
+            <p class="text-gray-400 mb-4"> © 2025 GRUPO VANTAGEM </p>
+            <p class="text-gray-500">O seu futuro mora aqui</p>
+        </div>
+    </footer>
+
+    <!-- Form Script -->
+  <form id="leadForm">
+  <input type="text" name="nome" placeholder="Nome" required>
+  <input type="tel" name="telefone" placeholder="Telefone" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <button type="submit">Enviar Mensagem</button>
+</form>
+
+<script>
+document.getElementById("leadForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  const url = "COLE_AQUI_O_URL_DO_WEBAPP"; // substitui pelo teu URL do Google Apps Script
+
+  fetch(url, {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.result === "success") {
+      alert("Obrigado pelo seu interesse! Um consultor entrará em contato em breve.");
+      this.reset();
+    } else {
+      alert("Ocorreu um erro. Tente novamente.");
+      console.error(data.error);
+    }
+  })
+  .catch(err => {
+    alert("Ocorreu um erro de rede.");
+    console.error(err);
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+

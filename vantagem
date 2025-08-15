@@ -15,46 +15,24 @@
 </head>
 <body class="bg-gray-50">
     <!-- Hero Section -->
-<section class="relative">
+    <section class="relative">
     <img src="https://ik.imagekit.io/ij9blp5q7/Foto%20Skyline.jpg?updatedAt=1755195590866" alt="Skyline Empreendimento" class="w-full h-auto">
     <div class="absolute inset-0 hero-gradient flex items-center justify-center">
         <div class="text-center text-white px-6 py-12">
             <h1 class="text-5xl md:text-7xl font-bold mb-6">SKYLINE</h1>
             <p class="text-xl md:text-2xl font-light mb-8">Empreendimento Exclusivo em Odivelas</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://www.remax.pt/pt/imoveis/venda-apartamento-t3-lisboa-odivelas/122481502-18/6wkMj2W82QuU59UqeqSlM-F-UNjOWvCH" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                    Ver Andar Modelo
+                <a href="https://www.remax.pt/pt/imoveis/venda-apartamento-t3-lisboa-odivelas/122481502-18/6wkMj2W82QuU59UqeqSlM-F-UNjOWvCH" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex-1 text-center">
+                    Ver Apartamento Modelo
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=351962323123" target="_blank" class="whatsapp-btn text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                <a href="https://api.whatsapp.com/send?phone=351962323123" target="_blank" class="whatsapp-btn text-white px-8 py-3 rounded-lg font-semibold transition-colors flex-1 flex items-center justify-center gap-2">
                     WhatsApp
                 </a>
             </div>
         </div>
     </div>
 </section>
-    <!-- About Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Descubra o Skyline</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                        Um empreendimento exclusivo localizado em Granjas Novas, Odivelas, que promete redefinir o conceito de habitação moderna e sustentável.
-                    </p>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                        Com 48 frações distribuídas por 6 edifícios de apenas 4 pisos, oferece um ambiente tranquilo e reservado, ideal para quem valoriza privacidade e conforto.
-                    </p>
-                    <div class="bg-blue-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-blue-800 mb-2">Conclusão Prevista</h3>
-                        <p class="text-blue-700">Segundo trimestre de 2026</p>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://ik.imagekit.io/ij9blp5q7/IMG_20250810_201918.jpg?updatedAt=1754853611005" alt="Skyline Projeto" class="w-full rounded-lg shadow-2xl">
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Pricing Table Section -->
     <section class="py-20 bg-gray-50">
@@ -128,8 +106,8 @@
                         <p class="text-green-100">+351 962 323 123</p>
                     </a>
 
-                    <a href="https://www.remax.pt/pt/imoveis/venda-apartamento-t3-lisboa-odivelas/122481502-18/6wkMj2W82QuU59UqeqSlM-F-UNjOWvCH" target="_blank" id="apartamento" class="block bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-lg font-semibold text-center">
-                        <span class="text-xl">Ver Andar Modelo</span>
+                    <a href="https://www.remax.pt/pt/imoveis/venda-apartamento-t3-lisboa-odivelas/122481502-18/6wkMj2W82QuU59UqeqSlM-F-UNjOWvCH" target="_blank" class="block bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-lg font-semibold text-center">
+                        <span class="text-xl">Ver Apartamento Modelo</span>
                         <p class="text-blue-100">Visite a página do imóvel</p>
                     </a>
                 </div>
@@ -146,44 +124,48 @@
         </div>
     </footer>
 
-    <!-- Form Script -->
-  <form id="leadForm">
-  <input type="text" name="nome" placeholder="Nome" required>
-  <input type="tel" name="telefone" placeholder="Telefone" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <button type="submit">Enviar Mensagem</button>
-</form>
-
 <script>
-document.getElementById("leadForm").addEventListener("submit", function(e){
-  e.preventDefault();
+  document.getElementById("leadForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector("button[type='submit']");
+    const originalText = btn.textContent;
 
-  const formData = new FormData(this);
-  const url = "COLE_AQUI_O_URL_DO_WEBAPP"; // substitui pelo teu URL do Google Apps Script
-
-  fetch(url, {
-    method: "POST",
-    body: formData
-  })
-  .then(res => res.json())
-  .then(data => {
-    if(data.result === "success") {
-      alert("Obrigado pelo seu interesse! Um consultor entrará em contato em breve.");
-      this.reset();
-    } else {
-      alert("Ocorreu um erro. Tente novamente.");
-      console.error(data.error);
+    try {
+      // Mostrar loading
+      btn.disabled = true;
+      btn.innerHTML = 'Enviando... <span class="animate-spin">↻</span>';
+      
+      // Capturar dados
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+      
+      // Enviar para o Google Sheets
+      const response = await fetch("https://script.google.com/macros/s/AKfycbwUxhuxA0WQWNfdq24nERgQ5m4wHVT1kSyUAKn5PgbT5fwVNPub1rPfT6K9WfwhnnSM/exec", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(data)
+      });
+      
+      if (!response.ok) throw new Error("Servidor respondeu com erro");
+      
+      const result = await response.json();
+      if (!result.success) throw new Error(result.error || "Erro no processamento");
+      
+      // Sucesso!
+      alert("✔️ Mensagem enviada com sucesso!");
+      e.target.reset();
+      
+    } catch (error) {
+      console.error("Erro detalhado:", error);
+      alert(`❌ Erro ao enviar: ${error.message}`);
+    } finally {
+      // Restaurar botão instantaneamente
+      btn.disabled = false;
+      btn.textContent = originalText;
     }
-  })
-  .catch(err => {
-    alert("Ocorreu um erro de rede.");
-    console.error(err);
   });
-});
 </script>
 
-</body>
-</html>
 
 
 

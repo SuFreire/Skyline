@@ -45,23 +45,104 @@
 </section>
 
 <!-- Conheça o Projeto -->
+<!-- Galeria Interativa com Lightbox e Fade-in -->
 <section class="py-20 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4 font-playfair">Conheça o Projeto</h2>
-            <p class="text-lg text-gray-600">Uma experiência única em Odivelas</p>
-        </div>
-        <div class="relative aspect-video rounded-lg overflow-hidden shadow-2xl border-2 border-gold">
-            <iframe 
-                src="https://www.youtube.com/embed/dZeuVTd4olQ" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center font-playfair">Galeria de Fotos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Item da galeria -->
+      <div class="overflow-hidden rounded-lg cursor-pointer group">
+        <img 
+          src="https://ik.imagekit.io/ij9blp5q7/Foto%2010.jpg?updatedAt=1755608902785" 
+          alt="Apartamento Skyline" 
+          class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300"
+          onclick="openLightbox(this.src, this.alt)">
+      </div>
+
+      <div class="overflow-hidden rounded-lg cursor-pointer group">
+        <img 
+          src="https://ik.imagekit.io/ij9blp5q7/Foto%207.jpg?updatedAt=1755608902430" 
+          alt="Sala Skyline" 
+          class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300"
+          onclick="openLightbox(this.src, this.alt)">
+      </div>
+
+      <div class="overflow-hidden rounded-lg cursor-pointer group">
+        <img 
+          src="https://ik.imagekit.io/ij9blp5q7/Foto%2011.jpg?updatedAt=1755608902698" 
+          alt="Varanda Skyline" 
+          class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300"
+          onclick="openLightbox(this.src, this.alt)">
+      </div>
+
+ <div class="overflow-hidden rounded-lg cursor-pointer group">
+        <img 
+          src="https://ik.imagekit.io/ij9blp5q7/Foto%208.jpg?updatedAt=1755608902462" 
+          alt="Varanda Skyline" 
+          class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300"
+          onclick="openLightbox(this.src, this.alt)">
+      </div>
+
+ <div class="overflow-hidden rounded-lg cursor-pointer group">
+        <img 
+          src="https://ik.imagekit.io/ij9blp5q7/Foto%209.jpg?updatedAt=1755608901850" 
+          alt="Varanda Skyline" 
+          class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300"
+          onclick="openLightbox(this.src, this.alt)">
+      </div>
+ <div class="overflow-hidden rounded-lg cursor-pointer group">
+        <img 
+          src="https://ik.imagekit.io/ij9blp5q7/Foto%205.jpg?updatedAt=1755608902734" 
+          alt="Varanda Skyline" 
+          class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300"
+          onclick="openLightbox(this.src, this.alt)">
+      </div>
+
+
+      <!-- Adiciona mais imagens seguindo o mesmo padrão -->
     </div>
+  </div>
 </section>
+
+<!-- Lightbox Modal com Fade-in -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+  <div class="relative max-w-4xl w-full px-4">
+    <button onclick="closeLightbox()" class="absolute top-2 right-2 text-white text-3xl font-bold">&times;</button>
+    <img id="lightbox-img" src="" alt="" class="w-full rounded-lg shadow-xl transform scale-95 transition-transform duration-300">
+    <p id="lightbox-caption" class="text-white text-center mt-4"></p>
+  </div>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  const caption = document.getElementById('lightbox-caption');
+
+  function openLightbox(src, alt) {
+    img.src = src;
+    caption.textContent = alt;
+    lightbox.classList.remove('pointer-events-none');
+    lightbox.classList.remove('opacity-0');
+    setTimeout(() => {
+      img.classList.remove('scale-95');
+    }, 50);
+  }
+
+  function closeLightbox() {
+    img.classList.add('scale-95');
+    lightbox.classList.add('opacity-0');
+    setTimeout(() => {
+      lightbox.classList.add('pointer-events-none');
+      img.src = '';
+    }, 300);
+  }
+
+  // Fecha ao clicar fora da imagem
+  lightbox.addEventListener('click', function(e) {
+    if(e.target === lightbox) closeLightbox();
+  });
+</script>
 
 
 <!-- Texto entre vídeo e tabela -->
@@ -82,6 +163,26 @@
             <li>✔️ Lavandaria para maior funcionalidade no dia a dia;</li>
         </ul>
     </section>
+
+<!-- Conheça o Projeto -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4 font-playfair">Conheça o Projeto</h2>
+            <p class="text-lg text-gray-600">Uma experiência única em Odivelas</p>
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden shadow-2xl border-2 border-gold">
+            <iframe 
+                src="https://www.youtube.com/embed/dZeuVTd4olQ" 
+                class="w-full h-full" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
 
 <!-- Unidades Disponíveis -->
 <section class="py-20 bg-white">

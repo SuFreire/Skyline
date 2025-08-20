@@ -47,11 +47,7 @@
         <div class="text-center text-white px-6 py-12">
             <h1 class="text-5xl md:text-7xl font-bold mb-2 font-playfair" data-key="title_hero">SKYLINE</h1>
             <p class="text-xl md:text-2xl font-light mb-4" data-key="hero_subtitle">Empreendimento Exclusivo em Odivelas</p>
-            <div class="mb-8">
-                <span class="text-3xl md:text-4xl font-bold bg-black/30 backdrop-blur-sm px-6 py-3 rounded-full inline-block border border-gold">
-                    <span data-key="starting_from">A partir de</span> <span class="gold-text">550.480,00€</span>
-                </span>
-            </div>
+         
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://www.remax.pt/pt/imoveis/venda-apartamento-t3-lisboa-odivelas/122481502-18/6wkMj2W82QuU59UqeqSlM-F-UNjOWvCH" target="_blank" class="bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:shadow-lg flex-1 text-center border border-gold" data-key="view_apartment">
                     Ver Apartamento
@@ -210,8 +206,29 @@
         <div class="bg-white rounded-lg shadow-xl p-8 inline-block border border-gray-200">
             <img src="https://ik.imagekit.io/ij9blp5q7/Tabela%202%20(2).jpg?updatedAt=1755203090882" alt="Tabela de Preços Skyline" data-key-alt="price_table_skyline" class="w-full rounded-lg shadow-lg">
         </div>
+</section>
+<section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <p id="constructionInfo" class="mt-8 text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto font-bold"
+           data-pt="🟢 Conclusão prevista: segundo semestre de 2026"
+           data-en="Construction is scheduled to begin in the fourth quarter of 2025 and is expected to be completed in 2027.">
+        </p>
     </div>
 </section>
+
+<script>
+    // Detecta idioma ou escolhe manualmente
+    const userLang = navigator.language || navigator.userLanguage; // exemplo: "pt-PT" ou "en-US"
+    const p = document.getElementById('constructionInfo');
+
+    if(userLang.startsWith('pt')){
+        p.textContent = p.getAttribute('data-pt');
+    } else {
+        p.textContent = p.getAttribute('data-en');
+    }
+</script>
+
+
 
 <section class="py-20 bg-dark-900 text-white">
     <div class="max-w-4xl mx-auto px-6">

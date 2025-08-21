@@ -29,9 +29,8 @@
   </style>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-100">
 
-<!-- Botões de idioma -->
 <div class="fixed top-4 right-4 z-50 flex gap-2">
   <button id="languagePT" class="bg-black/80 hover:bg-black text-white px-4 py-2 rounded-full text-sm md:text-base font-medium border border-gold backdrop-blur-sm transition-all shadow-lg language-btn active" data-lang="pt">
     PT
@@ -41,7 +40,6 @@
   </button>
 </div>
 
-<!-- Hero -->
 <section class="relative">
   <img src="https://ik.imagekit.io/ij9blp5q7/Foto%20Skyline.jpg?updatedAt=1755195590866" alt="Skyline Empreendimento" class="w-full h-auto">
   <div class="absolute inset-0 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);">
@@ -60,8 +58,7 @@
   </div>
 </section>
 
-<!-- Galeria -->
-<section class="py-20 bg-gray-50">
+<section class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center font-playfair" data-key="photo_gallery">Galeria</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -124,7 +121,6 @@
   </div>
 </section>
 
-<!-- Lightbox -->
 <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
   <div class="relative max-w-4xl w-full px-4">
     <button onclick="closeLightbox()" class="absolute top-2 right-2 text-white text-3xl font-bold">&times;</button>
@@ -160,8 +156,7 @@
   });
 </script>
 
-<!-- Descrição -->
-<section class="py-12 bg-gray-50 text-gray-800 max-w-6xl mx-auto px-6">
+<section class="py-12 bg-gray-100 text-gray-800 max-w-6xl mx-auto px-6">
   <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center font-playfair" data-key="description_title">Onde o Design Moderno Encontra o Conforto.</h2>
   <p class="text-lg mb-4" data-key="description_p1">
     Descubra o SKYLINE, um empreendimento exclusivo localizado em Granjas Novas, Odivelas, que promete redefinir o conceito de habitação moderna e sustentável. 
@@ -180,8 +175,7 @@
   </ul>
 </section>
 
-<!-- Vídeo -->
-<section class="py-20 bg-gray-50">
+<section class="py-20 bg-gray-100">
   <div class="max-w-4xl mx-auto px-6">
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold text-gray-800 mb-4 font-playfair" data-key="about_project_title">Conheça o Projeto</h2>
@@ -199,8 +193,7 @@
   </div>
 </section>
 
-<!-- Unidades + Tabela -->
-<section class="py-20 bg-white">
+<section class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-bold text-gray-800 mb-4 font-playfair" data-key="available_units_title">
       Unidades Disponíveis
@@ -210,30 +203,30 @@
     </p>
 
     <div class="bg-white rounded-xl shadow-lg overflow-hidden text-left">
-      <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4">
-        <h3 class="text-xl font-bold text-white">SKYLINE</h3>
-        <p class="text-blue-100 mt-1">
+  <div class="bg-gray-800 px-6 py-4">
+    <h3 class="text-xl font-bold gold-text font-playfair" data-key="management_title">SKYLINE</h3>
+</div>
+        
       </div>
 
       <div class="overflow-x-auto">
-        <table class="w-full">
-          <thead class="bg-gray-50">
+        <table class="w-full table-auto">
+          <thead class="bg-gray-50 text-gray-600 uppercase text-xs font-semibold tracking-wide">
             <tr>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Fração</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Tipo</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Tipologia</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Piso</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Área Bruta</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Área Interior</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Estacionamento</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Eficiência</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Preço</th>
-              <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Status</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="fraction_col">Fração</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="type_col">Tipo</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="typology_col">Tipologia</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="floor_col">Piso</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="gross_area_col">Área Bruta</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="interior_area_col">Área Interior</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="parking_col">Estacionamento</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="efficiency_col">Eficiência</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="price_col">Preço</th>
+              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="status_col">Status</th>
             </tr>
           </thead>
-          <tbody id="apartmentTable" class="bg-white divide-y divide-gray-200">
-            <!-- preenchido por JS -->
-          </tbody>
+          <tbody id="apartmentTable" class="bg-white divide-y divide-gray-100">
+            </tbody>
         </table>
       </div>
 
@@ -241,65 +234,59 @@
         <div class="flex flex-wrap gap-4 text-sm">
           <div class="flex items-center gap-2">
             <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span class="text-gray-600">Disponível</span>
+            <span class="text-gray-600" data-key="status_available">Disponível</span>
           </div>
           <div class="flex items-center gap-2">
             <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <span class="text-gray-600">Reservado</span>
+            <span class="text-gray-600" data-key="status_reserved">Reservado</span>
           </div>
           <div class="flex items-center gap-2">
             <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-            <span class="text-gray-600">Vendido</span>
+            <span class="text-gray-600" data-key="status_sold">Vendido</span>
           </div>
           <div class="ml-auto">
-            <button id="logoutBtn" class="hidden bg-gray-200 hover:bg-gray-300 text-gray-800 px-3 py-1 rounded-md text-sm">
+            <button id="logoutBtn" class="hidden bg-gray-200 hover:bg-gray-300 text-gray-800 px-3 py-1 rounded-md text-sm" data-key="logout_btn">
               Terminar sessão
             </button>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- Conclusão -->
 <section class="py-20 px-4">
   <div class="max-w-4xl mx-auto text-center">
     <p id="constructionInfo"
        class="mt-8 text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto font-bold"
-       data-pt="🔑 Conclusão prevista: segundo semestre de 2026"
-       data-en="🔑 Expected completion: second half of 2026.">
-    </p>
+       data-key="construction_info">🔑 Conclusão prevista: segundo semestre de 2026</p>
   </div>
 </section>
 
-<!-- Modal de Login (só aparece ao clicar no status) -->
 <div id="loginModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50">
   <div class="bg-white rounded-xl shadow-xl w-full max-w-md p-6">
     <div class="flex items-start justify-between mb-4">
       <div>
-        <h3 class="text-xl font-bold text-gray-900">Acesso restrito</h3>
-        <p class="text-gray-600 text-sm">Insira a senha para alterar o status.</p>
+        <h3 class="text-xl font-bold text-gray-900" data-key="modal_title">Acesso restrito</h3>
+        <p class="text-gray-600 text-sm" data-key="modal_subtitle">Insira a senha para alterar o status.</p>
       </div>
       <button onclick="closeLoginModal()" class="text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
     </div>
 
     <form id="loginForm" class="space-y-4">
       <div>
-        <label for="passwordField" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+        <label for="passwordField" class="block text-sm font-medium text-gray-700 mb-1" data-key="password_label">Senha</label>
         <input id="passwordField" type="password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Digite a senha" required>
       </div>
-      <p id="loginError" class="hidden text-sm text-red-600">Senha incorreta. Tenta novamente.</p>
+      <p id="loginError" class="hidden text-sm text-red-600" data-key="login_error">Senha incorreta. Tenta novamente.</p>
       <div class="flex items-center justify-end gap-2 pt-2">
-        <button type="button" onclick="closeLoginModal()" class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50">Cancelar</button>
-        <button type="submit" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Entrar</button>
+        <button type="button" onclick="closeLoginModal()" class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50" data-key="cancel_btn">Cancelar</button>
+        <button type="submit" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700" data-key="enter_btn">Entrar</button>
       </div>
     </form>
   </div>
 </div>
 
-<!-- Contacto -->
 <section class="py-20 bg-dark-900 text-white">
   <div class="max-w-4xl mx-auto px-6">
     <div class="text-center mb-12">
@@ -310,7 +297,7 @@
     <div class="grid md:grid-cols-2 gap-12">
       <div class="bg-gray-800 p-8 rounded-lg border border-gold/20">
         <h3 class="text-2xl font-semibold mb-6 font-playfair" data-key="contact_form_title">Formulário de Contato</h3>
-        <form id="leadForm" class="space-y-6">
+        <form id="leadForm" class="space-y-6" action="https://script.google.com/macros/s/AKfycbyv8agjYSdw5IxUyk4x7v0mpbHp2pq6IWfGa1Cky3bygNmHFR9dnwiPeyaDLlD2H4tu/exec" method="POST" target="no-visible-iframe">
           <div>
             <label class="block text-sm font-medium mb-2" data-key="name_label">Nome:</label>
             <input type="text" name="nome" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:border-gold focus:ring-1 focus:ring-gold">
@@ -328,6 +315,7 @@
           </button>
           <p id="formMessage" class="hidden mt-2"></p>
         </form>
+        <iframe name="no-visible-iframe" style="display:none;"></iframe>
       </div>
 
       <div class="space-y-8">
@@ -355,49 +343,199 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="bg-black text-white py-12 border-t border-gold/20">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h3 class="text-3xl font-bold mb-4 font-playfair" data-key="footer_title">SKYLINE</h3>
-    <p class="text-gray-400 mb-4" data-key="copyright">© 2025 REMAX + GRUPO VANTAGEM</p>
-    <p class="text-gray-500" data-key="footer_slogan">O seu futuro mora aqui</p>
+    <p class="text-sm text-gray-400" data-key="footer_text">
+        © 2024 Skyline. Todos os direitos reservados.
+    </p>
   </div>
 </footer>
 
-<!-- SCRIPT: Tabela + Login Modal -->
 <script>
-  // ====== PASSWORD (muda aqui se quiseres) ======
-  const PASSWORD = "Antonio_Rodrigues";
-
-  // ====== Dados ======
-  const INITIAL_DATA = [
-    { id: "122481502-18", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "225 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "550 480 €", status: "Disponível" },
-    { id: "122481502-19", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "225 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "550 480 €", status: "Disponível" },
-    { id: "122481502-26", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "225 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "550 480 €", status: "Disponível" },
-    { id: "122481502-27", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "225 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "550 480 €", status: "Disponível" },
-    { id: "122481502-23", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "242 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "573 360 €", status: "Disponível" },
-    { id: "122481502-16", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "330 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "678 270 €", status: "Disponível" },
-    { id: "122481502-24", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "350 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "678 270 €", status: "Disponível" },
-    { id: "122481502-25", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "327 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "678 270 €", status: "Disponível" },
-    { id: "122481502-17", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "327 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "678 270 €", status: "Disponível" },
-    { id: "122481502-28", tipo: "Apartamento", tipologia: "T3", piso: "", areaBruta: "238 m²", areaInterior: "123 m²", estacionamento: "2", eficiencia: "NC", preco: "568 080 €", status: "Vendido" }
+  // Dados dos apartamentos (mantidos como estavam)
+  const apartmentData = [
+    {id:"122481502-18", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
+    {id:"122481502-19", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
+    {id:"122481502-26", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
+    {id:"122481502-27", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
+    {id:"122481502-23", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"242 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"573 360 €", status:"Disponível"},
+    {id:"122481502-16", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"330 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
+    {id:"122481502-24", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"350 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
+    {id:"122481502-25", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"327 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
+    {id:"122481502-17", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"327 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
+    {id:"122481502-28", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"238 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"568 080 €", status:"Vendido"}
   ];
 
   const statusOptions = ["Disponível", "Reservado", "Vendido"];
+  let tempApartmentId = null;
+  const correctPassword = "Antonio_Rodrigues";
+  
+  // Objeto de traduções
+  const translations = {
+    "pt": {
+      "title": "Skyline - Empreendimento Premium em Odivelas",
+      "title_hero": "SKYLINE",
+      "hero_subtitle": "Empreendimento Exclusivo em Odivelas",
+      "view_apartment": "Ver Apartamento",
+      "whatsapp_btn": "WhatsApp",
+      "photo_gallery": "Galeria",
+      "apartment_skyline": "Apartamento Skyline",
+      "living_room_skyline": "Sala Skyline",
+      "balcony_skyline": "Varanda Skyline",
+      "balcony_skyline_2": "Varanda Skyline",
+      "balcony_skyline_3": "Varanda Skyline",
+      "balcony_skyline_4": "Varanda Skyline",
+      "description_title": "Onde o Design Moderno Encontra o Conforto.",
+      "description_p1": "Descubra o SKYLINE, um empreendimento exclusivo localizado em Granjas Novas, Odivelas, que promete redefinir o conceito de habitação moderna e sustentável.",
+      "description_p2": "Todos os apartamentos são T3 e foram projetados com um design moderno e elegante, onde a atenção ao detalhe e os acabamentos de alta qualidade garantem uma experiência única de habitação. Com áreas totais por fração que variam entre 225m² e 350m², cada unidade dispõe de:",
+      "list_item_1": "✔️ Duas suítes, mais um quarto com WC de apoio, proporcionando máximo conforto e privacidade;",
+      "list_item_2": "✔️ Sala em open space com a cozinha, criando um ambiente amplo, funcional e convidativo;",
+      "list_item_3": "✔️ Cozinha totalmente equipada, combinando eficiência e sofisticação;",
+      "list_item_4": "✔️ Varandas e amplos terraços em todas as frações, proporcionando espaços exteriores ideais para lazer e convívio ao ar livre;",
+      "list_item_5": "✔️ 1 box com 2 lugares de estacionamento, garantindo segurança e comodidade para estacionamento;",
+      "list_item_6": "✔️ Lavandaria para maior funcionalidade no dia a dia;",
+      "about_project_title": "Conheça o Projeto",
+      "about_project_subtitle": "Uma experiência única em Odivelas",
+      "available_units_title": "Unidades Disponíveis",
+      "available_units_subtitle": "Descubra as opções exclusivas do Skyline",
+      "management_title": "SKYLINE",
+      "fraction_col": "Fração",
+      "type_col": "Tipo",
+      "typology_col": "Tipologia",
+      "floor_col": "Piso",
+      "gross_area_col": "Área Bruta",
+      "interior_area_col": "Área Interior",
+      "parking_col": "Estacionamento",
+      "efficiency_col": "Eficiência",
+      "price_col": "Preço",
+      "status_col": "Status",
+      "status_available": "Disponível",
+      "status_reserved": "Reservado",
+      "status_sold": "Vendido",
+      "logout_btn": "Terminar sessão",
+      "construction_info": "🔑 Conclusão prevista: segundo semestre de 2026",
+      "modal_title": "Acesso restrito",
+      "modal_subtitle": "Insira a senha para alterar o status.",
+      "password_label": "Senha",
+      "login_error": "Senha incorreta. Tenta novamente.",
+      "cancel_btn": "Cancelar",
+      "enter_btn": "Entrar",
+      "interested_title": "Interessado?",
+      "interested_subtitle": "Agende uma visita ou solicite informações",
+      "contact_form_title": "Formulário de Contato",
+      "name_label": "Nome:",
+      "phone_label": "Telefone:",
+      "email_label": "Email:",
+      "send_message_btn": "Enviar Mensagem",
+      "other_contact_title": "Outras Formas de Contato",
+      "whatsapp_link": "WhatsApp",
+      "view_apartment_link": "Ver Apartamento",
+      "skyline_odivelas": "Skyline Odivelas",
+      "footer_text": "© 2024 Skyline. Todos os direitos reservados.",
+      "form_success": "Obrigado pelo seu interesse! Um consultor irá entrar em contato em breve.",
+      "form_error": "Houve um erro no envio. Tente novamente mais tarde.",
+      "network_error": "Erro de rede. Verifique a sua conexão."
+    },
+    "en": {
+      "title": "Skyline - Premium Development in Odivelas",
+      "title_hero": "SKYLINE",
+      "hero_subtitle": "Exclusive Development in Odivelas",
+      "view_apartment": "View Apartment",
+      "whatsapp_btn": "WhatsApp",
+      "photo_gallery": "Photo Gallery",
+      "apartment_skyline": "Skyline Apartment",
+      "living_room_skyline": "Skyline Living Room",
+      "balcony_skyline": "Skyline Balcony",
+      "balcony_skyline_2": "Skyline Balcony",
+      "balcony_skyline_3": "Skyline Balcony",
+      "balcony_skyline_4": "Skyline Balcony",
+      "description_title": "Where Modern Design Meets Comfort.",
+      "description_p1": "Discover SKYLINE, an exclusive development located in Granjas Novas, Odivelas, that promises to redefine the concept of modern and sustainable living.",
+      "description_p2": "All apartments are T3 and have been designed with a modern and elegant design, where attention to detail and high-quality finishes guarantee a unique living experience. With total areas per unit ranging from 225m² to 350m², each unit features:",
+      "list_item_1": "✔️ Two suites, plus a bedroom with a supporting bathroom, providing maximum comfort and privacy;",
+      "list_item_2": "✔️ Open-plan living room with the kitchen, creating a spacious, functional, and inviting environment;",
+      "list_item_3": "✔️ Fully equipped kitchen, combining efficiency and sophistication;",
+      "list_item_4": "✔️ Balconies and large terraces in all units, providing ideal outdoor spaces for leisure and outdoor socializing;",
+      "list_item_5": "✔️ 1 box with 2 parking spaces, ensuring security and convenience for parking;",
+      "list_item_6": "✔️ Laundry room for greater day-to-day functionality;",
+      "about_project_title": "Learn About the Project",
+      "about_project_subtitle": "A unique experience in Odivelas",
+      "available_units_title": "Available Units",
+      "available_units_subtitle": "Discover the exclusive options at Skyline",
+      "management_title": "SKYLINE",
+      "fraction_col": "Fraction",
+      "type_col": "Type",
+      "typology_col": "Typology",
+      "floor_col": "Floor",
+      "gross_area_col": "Gross Area",
+      "interior_area_col": "Interior Area",
+      "parking_col": "Parking",
+      "efficiency_col": "Efficiency",
+      "price_col": "Price",
+      "status_col": "Status",
+      "status_available": "Available",
+      "status_reserved": "Reserved",
+      "status_sold": "Sold",
+      "logout_btn": "Log out",
+      "construction_info": "🔑 Expected completion: second half of 2026",
+      "modal_title": "Restricted access",
+      "modal_subtitle": "Enter the password to change the status.",
+      "password_label": "Password",
+      "login_error": "Incorrect password. Please try again.",
+      "cancel_btn": "Cancel",
+      "enter_btn": "Enter",
+      "interested_title": "Interested?",
+      "interested_subtitle": "Schedule a visit or request information",
+      "contact_form_title": "Contact Form",
+      "name_label": "Name:",
+      "phone_label": "Phone:",
+      "email_label": "Email:",
+      "send_message_btn": "Send Message",
+      "other_contact_title": "Other Forms of Contact",
+      "whatsapp_link": "WhatsApp",
+      "view_apartment_link": "View Apartment",
+      "skyline_odivelas": "Skyline Odivelas",
+      "footer_text": "© 2024 Skyline. All rights reserved.",
+      "form_success": "Your message has been sent successfully!",
+      "form_error": "There was an error sending. Please try again later.",
+      "network_error": "Network error. Please check your connection."
+    }
+  };
 
-  // ====== Estado: auth e dados persistentes ======
-  let isAuthed = sessionStorage.getItem('skylineAuth') === '1';
-  let apartmentData = (() => {
-    const saved = localStorage.getItem('apartmentData');
-    try { return saved ? JSON.parse(saved) : [...INITIAL_DATA]; }
-    catch { return [...INITIAL_DATA]; }
-  })();
+  let currentLanguage = 'pt';
 
-  const tableBody = document.getElementById('apartmentTable');
-  const logoutBtn = document.getElementById('logoutBtn');
+  // Função para renderizar a tabela de apartamentos
+  function renderTable() {
+    const tableBody = document.getElementById('apartmentTable');
+    tableBody.innerHTML = '';
+    const statusText = {
+      "Disponível": translations[currentLanguage]["status_available"],
+      "Reservado": translations[currentLanguage]["status_reserved"],
+      "Vendido": translations[currentLanguage]["status_sold"]
+    };
 
-  function saveData() {
-    localStorage.setItem('apartmentData', JSON.stringify(apartmentData));
+    apartmentData.forEach(apartment => {
+      const row = document.createElement('tr');
+      row.className = 'hover:bg-gray-50 transition-colors duration-200';
+      row.innerHTML = `
+        <td class="px-4 py-3 text-sm font-medium text-gray-900">${apartment.id}</td>
+        <td class="px-4 py-3 text-sm text-gray-700">${apartment.tipo}</td>
+        <td class="px-4 py-3 text-sm text-gray-700">${apartment.tipologia}</td>
+        <td class="px-4 py-3 text-sm text-gray-700">${apartment.piso}</td>
+        <td class="px-4 py-3 text-sm text-gray-700">${apartment.areaBruta}</td>
+        <td class="px-4 py-3 text-sm text-gray-700">${apartment.areaInterior}</td>
+        <td class="px-4 py-3 text-sm text-gray-700">${apartment.estacionamento}</td>
+        <td class="px-4 py-3 text-sm text-gray-700">${apartment.eficiencia}</td>
+        <td class="px-4 py-3 text-sm font-semibold text-gray-900">${apartment.preco}</td>
+        <td class="px-4 py-3">
+          <button onclick="promptPassword('${apartment.id}')"
+            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border cursor-pointer hover:shadow-md transition-all duration-200 ${getStatusColor(apartment.status)}">
+            ${statusText[apartment.status]}
+          </button>
+        </td>
+      `;
+      tableBody.appendChild(row);
+    });
   }
 
   function getStatusColor(status) {
@@ -409,257 +547,126 @@
     }
   }
 
-  function renderTable() {
-    tableBody.innerHTML = '';
-    apartmentData.forEach(apartment => {
-      const row = document.createElement('tr');
-      row.className = 'hover:bg-gray-50 transition-colors duration-200';
-      row.innerHTML = `
-        <td class="px-4 py-4 text-sm font-medium text-gray-900">${apartment.id}</td>
-        <td class="px-4 py-4 text-sm text-gray-700">${apartment.tipo}</td>
-        <td class="px-4 py-4 text-sm text-gray-700">${apartment.tipologia}</td>
-        <td class="px-4 py-4 text-sm text-gray-700">${apartment.piso}</td>
-        <td class="px-4 py-4 text-sm text-gray-700">${apartment.areaBruta}</td>
-        <td class="px-4 py-4 text-sm text-gray-700">${apartment.areaInterior}</td>
-        <td class="px-4 py-4 text-sm text-gray-700">${apartment.estacionamento}</td>
-        <td class="px-4 py-4 text-sm text-gray-700">${apartment.eficiencia}</td>
-        <td class="px-4 py-4 text-sm font-semibold text-gray-900">${apartment.preco}</td>
-        <td class="px-4 py-4">
-          <button 
-            onclick="handleStatusClick('${apartment.id}')"
-            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border cursor-pointer hover:shadow-md transition-all duration-200 ${getStatusColor(apartment.status)}"
-          >
-            ${apartment.status}
-          </button>
-        </td>
-      `;
-      tableBody.appendChild(row);
-    });
-
-    // mostrar/esconder botão logout
-    logoutBtn.classList.toggle('hidden', !isAuthed);
-  }
-
-  function cycleStatus(apartmentId) {
-    const apt = apartmentData.find(a => a.id === apartmentId);
-    if (!apt) return;
-    const idx = statusOptions.indexOf(apt.status);
-    const next = (idx + 1) % statusOptions.length;
-    apt.status = statusOptions[next];
-    saveData();
-    renderTable();
-  }
-
-  // ====== Login Modal ======
+  // Funções para o Modal de Login
   const loginModal = document.getElementById('loginModal');
-  const loginForm  = document.getElementById('loginForm');
   const passwordField = document.getElementById('passwordField');
+  const loginForm = document.getElementById('loginForm');
   const loginError = document.getElementById('loginError');
-  let pendingApartmentId = null;
 
-  function openLoginModal(targetApartmentId) {
-    pendingApartmentId = targetApartmentId || null;
-    loginError.classList.add('hidden');
-    passwordField.value = '';
+  function promptPassword(apartmentId) {
+    tempApartmentId = apartmentId;
     loginModal.classList.remove('hidden');
     loginModal.classList.add('flex');
-    setTimeout(() => passwordField.focus(), 50);
+    passwordField.focus();
   }
+
   function closeLoginModal() {
     loginModal.classList.add('hidden');
     loginModal.classList.remove('flex');
+    passwordField.value = '';
+    loginError.classList.add('hidden');
   }
 
-  function handleStatusClick(apartmentId) {
-    if (!isAuthed) {
-      openLoginModal(apartmentId);
-      return;
-    }
-    cycleStatus(apartmentId);
-  }
-
-  loginForm.addEventListener('submit', function(e){
+  loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const ok = passwordField.value === PASSWORD;
-    if (!ok) {
-      loginError.classList.remove('hidden');
-      passwordField.focus();
-      return;
-    }
-    isAuthed = true;
-    sessionStorage.setItem('skylineAuth', '1');
-    closeLoginModal();
-    if (pendingApartmentId) {
-      cycleStatus(pendingApartmentId);
-      pendingApartmentId = null;
-    }
-    renderTable();
-  });
-
-  // fecha modal com ESC
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !loginModal.classList.contains('hidden')) {
+    if (passwordField.value === correctPassword) {
+      changeStatus(tempApartmentId);
       closeLoginModal();
-    }
-  });
-
-  // logout
-  logoutBtn.addEventListener('click', () => {
-    isAuthed = false;
-    sessionStorage.removeItem('skylineAuth');
-    pendingApartmentId = null;
-    renderTable();
-  });
-
-  // Render inicial
-  renderTable();
-</script>
-
-<!-- SCRIPT: Formulário (Apps Script) -->
-<script>
-const form = document.getElementById("leadForm");
-const submitBtn = document.getElementById("submitBtn");
-const formMessage = document.getElementById("formMessage");
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyv8agjYSdw5IxUyk4x7v0mpbHp2pq6IWfGa1Cky3bygNmHFR9dnwiPeyaDLlD2H4tu/exec";
-
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-  const formData = new FormData(form);
-
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Enviando...";
-  formMessage.classList.add("hidden");
-  formMessage.textContent = "";
-
-  fetch(SCRIPT_URL, { method: "POST", body: formData })
-  .then(res => res.text())
-  .then(text => {
-    if(text.includes("OK")){
-      formMessage.textContent = translations['form_success'][currentLanguage];
-      formMessage.classList.remove("hidden");
-      formMessage.classList.remove("text-red-500");
-      formMessage.classList.add("text-green-500");
-      form.reset();
     } else {
-      formMessage.textContent = translations['form_error'][currentLanguage];
-      formMessage.classList.remove("hidden");
-      formMessage.classList.remove("text-green-500");
-      formMessage.classList.add("text-red-500");
-      console.error("Apps Script Error:", text);
+      loginError.classList.remove('hidden');
+      passwordField.value = '';
+      passwordField.focus();
     }
-  })
-  .catch(error => {
-    formMessage.textContent = translations['network_error'][currentLanguage];
-    formMessage.classList.remove("hidden");
-    formMessage.classList.remove("text-green-500");
-    formMessage.classList.add("text-red-500");
-    console.error(error);
-  })
-  .finally(()=>{
-    submitBtn.disabled = false;
-    updateLanguage();
   });
-});
+
+  function changeStatus(apartmentId) {
+    const apartment = apartmentData.find(apt => apt.id === apartmentId);
+    if (apartment) {
+      const currentIndex = statusOptions.indexOf(apartment.status);
+      const nextIndex = (currentIndex + 1) % statusOptions.length;
+      apartment.status = statusOptions[nextIndex];
+      renderTable();
+    }
+  }
+
+  // Lógica de tradução
+  function translatePage(lang) {
+    document.querySelectorAll('[data-key]').forEach(element => {
+      const key = element.getAttribute('data-key');
+      if (translations[lang][key]) {
+        element.textContent = translations[lang][key];
+      }
+    });
+
+    document.querySelectorAll('[data-key-alt]').forEach(element => {
+      const key = element.getAttribute('data-key-alt');
+      if (translations[lang][key]) {
+        element.alt = translations[lang][key];
+      }
+    });
+
+    renderTable();
+  }
+
+  function switchLanguage(lang) {
+    currentLanguage = lang;
+    document.getElementById('languagePT').classList.remove('active');
+    document.getElementById('languageEN').classList.remove('active');
+    document.getElementById(`language${lang.toUpperCase()}`).classList.add('active');
+    translatePage(lang);
+  }
+
+  document.getElementById('languagePT').addEventListener('click', () => switchLanguage('pt'));
+  document.getElementById('languageEN').addEventListener('click', () => switchLanguage('en'));
+
+  // Inicializa o site com o idioma padrão
+  document.addEventListener('DOMContentLoaded', () => {
+    switchLanguage('pt');
+  });
+
+  const form = document.getElementById("leadForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const formMessage = document.getElementById("formMessage");
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyv8agjYSdw5IxUyk4x7v0mpbHp2pq6IWfGa1Cky3bygNmHFR9dnwiPeyaDLlD2H4tu/exec";
+
+  form.addEventListener("submit", function(e){
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = translations[currentLanguage]["sending"];
+      formMessage.classList.add("hidden");
+      formMessage.textContent = "";
+
+      fetch(SCRIPT_URL, { method: "POST", body: formData })
+      .then(res => res.text())
+      .then(text => {
+          if(text.includes("OK")){
+              formMessage.textContent = translations[currentLanguage]['form_success'];
+              formMessage.classList.remove("hidden", "text-red-600");
+              formMessage.classList.add("text-green-600");
+              form.reset();
+          } else {
+              formMessage.textContent = translations[currentLanguage]['form_error'];
+              formMessage.classList.remove("hidden", "text-green-600");
+              formMessage.classList.add("text-red-600");
+              console.error("Apps Script Error:", text);
+          }
+      })
+      .catch(error => {
+          formMessage.textContent = translations[currentLanguage]['network_error'];
+          formMessage.classList.remove("hidden", "text-green-600");
+          formMessage.classList.add("text-red-600");
+          console.error(error);
+      })
+      .finally(()=>{
+          submitBtn.disabled = false;
+          submitBtn.textContent = translations[currentLanguage]["send_message_btn"];
+      });
+  });
 </script>
 
-<!-- SCRIPT: Traduções -->
-<script>
-  const translations = {
-    'title': { pt: 'Skyline - Empreendimento Premium em Odivelas', en: 'Skyline - Premium Development in Odivelas' },
-    'og:title': { pt: 'Skyline - Empreendimento Premium em Odivelas', en: 'Skyline - Premium Development in Odivelas' },
-    'og:description': { 
-      pt: 'Descubra o Skyline, um empreendimento exclusivo localizado em Granjas Novas, Odivelas, que promete redefinir o conceito de habitação moderna e sustentável.', 
-      en: 'Discover Skyline, an exclusive development located in Granjas Novas, Odivelas, promising to redefine the concept of modern and sustainable housing.' 
-    },
-    'og:site_name': { pt: 'Skyline - Empreendimento Premium em Odivelas', en: 'Skyline - Premium Development in Odivelas' },
-
-    'title_hero': { pt: 'SKYLINE', en: 'SKYLINE' },
-    'hero_subtitle': { pt: 'Empreendimento Exclusivo em Odivelas', en: 'Exclusive Development in Odivelas' },
-    'starting_from': { pt: 'A partir de', en: 'Starting from' },
-    'view_apartment': { pt: 'Ver Apartamento', en: 'View Apartment' },
-    'whatsapp_btn': { pt: 'WhatsApp', en: 'WhatsApp' },
-
-    'photo_gallery': { pt: 'Galeria de Fotos', en: 'Photo Gallery' },
-    'apartment_skyline': { pt: 'Apartamento Skyline', en: 'Skyline Apartment' },
-    'living_room_skyline': { pt: 'Sala Skyline', en: 'Skyline Living Room' },
-    'balcony_skyline': { pt: 'Varanda Skyline', en: 'Skyline Balcony' },
-    'balcony_skyline_2': { pt: 'Varanda Skyline', en: 'Skyline Balcony' },
-    'balcony_skyline_3': { pt: 'Varanda Skyline', en: 'Skyline Balcony' },
-    'balcony_skyline_4': { pt: 'Varanda Skyline', en: 'Skyline Balcony' },
-
-    'description_title': { 
-      pt: 'Skyline Odivelas: "Onde o Design Moderno Encontra o Luxo e o Conforto"', 
-      en: 'Skyline Odivelas: "Where Modern Design Meets Luxury and Comfort"' 
-    },
-    'description_p1': { 
-      pt: 'Descubra o Skyline, um empreendimento exclusivo localizado em Granjas Novas, Odivelas, que promete redefinir o conceito de habitação moderna e sustentável.', 
-      en: 'Discover Skyline, an exclusive development located in Granjas Novas, Odivelas, promising to redefine the concept of modern and sustainable housing.' 
-    },
-    'description_p2': { 
-      pt: 'Todos os apartamentos são T3 e foram projetados com um design moderno e elegante, onde a atenção ao detalhe e os acabamentos de alta qualidade garantem uma experiência única de habitação. Com áreas totais por fração que variam entre 225m² e 350m², cada unidade dispõe de:', 
-      en: 'All apartments are T3 and feature modern, elegant designs where attention to detail and high-quality finishes ensure a unique living experience. With total areas per unit ranging from 225m² to 350m², each unit features:' 
-    },
-
-    'list_item_1': { pt: '✔️ Duas suítes, mais um quarto com WC de apoio, proporcionando máximo conforto e privacidade;', en: '✔️ Two suites plus one bedroom with support bathroom, providing maximum comfort and privacy;' },
-    'list_item_2': { pt: '✔️ Sala em open space com a cozinha, criando um ambiente amplo, funcional e convidativo;', en: '✔️ Open space living room with kitchen, creating a spacious, functional and inviting environment;' },
-    'list_item_3': { pt: '✔️ Cozinha totalmente equipada, combinando eficiência e sofisticação;', en: '✔️ Fully equipped kitchen combining efficiency and sophistication;' },
-    'list_item_4': { pt: '✔️ Varandas e amplos terraços em todas as frações, proporcionando espaços exteriores ideais para lazer e convívio ao ar livre;', en: '✔️ Balconies and spacious terraces in all units, providing ideal outdoor spaces for leisure and socializing;' },
-    'list_item_5': { pt: '✔️ 1 box com 2 lugares de estacionamento, garantindo segurança e comodidade para estacionamento;', en: '✔️ 1 garage with 2 parking spaces, ensuring security and convenience for parking;' },
-    'list_item_6': { pt: '✔️ Lavandaria para maior funcionalidade no dia a dia;', en: '✔️ Laundry room for greater functionality in daily life;' },
-
-    'about_project_title': { pt: 'Conheça o Projeto', en: 'About the Project' },
-    'about_project_subtitle': { pt: 'Uma experiência única em Odivelas', en: 'A unique experience in Odivelas' },
-
-    'available_units_title': { pt: 'Unidades Disponíveis', en: 'Available Units' },
-    'available_units_subtitle': { pt: 'Descubra as opções exclusivas do Skyline', en: 'Discover Skyline\'s exclusive options' },
-    'price_table_skyline': { pt: 'Tabela de Preços Skyline', en: 'Skyline Price Table' },
-
-    'interested_title': { pt: 'Interessado?', en: 'Interested?' },
-    'interested_subtitle': { pt: 'Agende uma visita ou solicite informações', en: 'Schedule a visit or request information' },
-    'contact_form_title': { pt: 'Formulário de Contato', en: 'Contact Form' },
-    'name_label': { pt: 'Nome:', en: 'Name:' },
-    'phone_label': { pt: 'Telefone:', en: 'Phone:' },
-    'email_label': { pt: 'Email:', en: 'Email:' },
-    'send_message_btn': { pt: 'Enviar Mensagem', en: 'Send Message' },
-    'sending_btn': { pt: 'Enviando...', en: 'Sending...' },
-    'other_contact_title': { pt: 'Outras Formas de Contato', en: 'Other Contact Methods' },
-    'whatsapp_link': { pt: 'WhatsApp', en: 'WhatsApp' },
-    'view_apartment_link': { pt: 'Ver Apartamento', en: 'View Apartment' },
-    'skyline_odivelas': { pt: 'Skyline Odivelas', en: 'Skyline Odivelas' },
-
-    'form_success': {
-      pt: '✔️ Obrigado pelo seu interesse! Entraremos em contato brevemente.',
-      en: '✔️ Thank you for your interest! We will contact you shortly.'
-    },
-    'form_error': {
-      pt: '❌ Ocorreu um erro ao enviar. Por favor, tente novamente ou contacte-nos via WhatsApp.',
-      en: '❌ An error occurred while sending. Please try again or contact us via WhatsApp.'
-    },
-    'network_error': {
-      pt: '❌ Ocorreu um erro de rede. Por favor, tente novamente.',
-      en: '❌ A network error occurred. Please try again.'
-    },
-
-    'footer_title': { pt: 'SKYLINE', en: 'SKYLINE' },
-    'copyright': { pt: '© 2025 REMAX + GRUPO VANTAGEM', en: '© 2025 REMAX + GRUPO VANTAGEM' },
-    'footer_slogan': { pt: 'O seu futuro mora aqui', en: 'Your future lives here' }
-  };
-
-  let currentLanguage = 'pt';
-  const languageButtons = document.querySelectorAll('.language-btn');
-
-  function updateLanguage() {
-    document.documentElement.lang = currentLanguage;
-    document.title = translations['title'][currentLanguage];
-    document.querySelector('meta[property="og:title"]').content = translations['og:title'][currentLanguage];
-    document.querySelector('meta[property="og:description"]').content = translations['og:description'][currentLanguage];
-    document.querySelector('meta[property="og:site_name"]').content = translations['og:site_name'][currentLanguage];
-
-    document.querySelectorAll('[data-key]').forEach(el => {
-      const key = el.dataset.key;
-      if (translations[key]) el.textContent = translations[key][currentLanguage];
-    });
-    document.querySelectorAll('[data-key-alt]').forEach(el => {
-      const key = el.dataset.keyAlt || el.dataset.keyalt || el.getAtt
+</body>
+</html>
 
 

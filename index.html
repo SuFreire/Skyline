@@ -216,8 +216,7 @@
               <th class="px-4 py-3 text-left border-b border-gray-200" data-key="fraction_col">Fração</th>
               <th class="px-4 py-3 text-left border-b border-gray-200" data-key="type_col">Tipo</th>
               <th class="px-4 py-3 text-left border-b border-gray-200" data-key="typology_col">Tipologia</th>
-              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="floor_col">Piso</th>
-              <th class="px-4 py-3 text-left border-b border-gray-200" data-key="gross_area_col">Área Bruta</th>
+               <th class="px-4 py-3 text-left border-b border-gray-200" data-key="gross_area_col">Área Bruta</th>
               <th class="px-4 py-3 text-left border-b border-gray-200" data-key="interior_area_col">Área Interior</th>
               <th class="px-4 py-3 text-left border-b border-gray-200" data-key="parking_col">Estacionamento</th>
               <th class="px-4 py-3 text-left border-b border-gray-200" data-key="efficiency_col">Eficiência</th>
@@ -354,16 +353,18 @@
 <script>
   // Dados dos apartamentos (mantidos como estavam)
   const apartmentData = [
-    {id:"122481502-18", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
-    {id:"122481502-19", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
-    {id:"122481502-26", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
-    {id:"122481502-27", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
-    {id:"122481502-23", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"242 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"573 360 €", status:"Disponível"},
-    {id:"122481502-16", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"330 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
-    {id:"122481502-24", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"350 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
-    {id:"122481502-25", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"327 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
-    {id:"122481502-17", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"327 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
-    {id:"122481502-28", tipo:"Apartamento", tipologia:"T3", piso:"", areaBruta:"238 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"568 080 €", status:"Vendido"}
+    {id:"122481502-18", tipo:"Apartamento", tipologia:"T3", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
+    {id:"122481502-19", tipo:"Apartamento", tipologia:"T3", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
+    {id:"122481502-26", tipo:"Apartamento", tipologia:"T3", areaBruta:"225 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
+    {id:"122481502-27", tipo:"Apartamento", tipologia:"T3", areaBruta:"225 m²", areaInterior:"203 m²", estacionamento:"2", eficiencia:"NC", preco:"550 480 €", status:"Disponível"},
+    {id:"122481502-23", tipo:"Apartamento", tipologia:"T3", areaBruta:"242 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"573 360 €", status:"Disponível"},
+    {id:"122481502-16", tipo:"Apartamento", tipologia:"T3", areaBruta:"330 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Vendido"},
+    {id:"122481502-24", tipo:"Apartamento", tipologia:"T3", areaBruta:"350 m²", areaInterior:"105 m²", estacionamento:"2", eficiencia:"NC", preco:"678 270 €", status:"Disponível"},
+    {id:"122481502-25", tipo:"Apartamento", tipologia:"T3", areaBruta:"327 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"681 720 €", status:"Disponível"},
+    {id:"122481502-17", tipo:"Apartamento", tipologia:"T3", areaBruta:"327 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"681 720 €", status:"Disponível"},
+{id:"122481502-29", tipo:"Apartamento", tipologia:"T3", areaBruta:"238 m²", areaInterior:"215 m²", estacionamento:"2", eficiencia:"NC", preco:"568 080 €", status:"Vendido"},
+
+    {id:"122481502-28", tipo:"Apartamento", tipologia:"T3", areaBruta:"238 m²", areaInterior:"123 m²", estacionamento:"2", eficiencia:"NC", preco:"568 080 €", status:"Vendido"}
   ];
 
   const statusOptions = ["Disponível", "Reservado", "Vendido"];
@@ -520,7 +521,6 @@
         <td class="px-4 py-3 text-sm font-medium text-gray-900">${apartment.id}</td>
         <td class="px-4 py-3 text-sm text-gray-700">${apartment.tipo}</td>
         <td class="px-4 py-3 text-sm text-gray-700">${apartment.tipologia}</td>
-        <td class="px-4 py-3 text-sm text-gray-700">${apartment.piso}</td>
         <td class="px-4 py-3 text-sm text-gray-700">${apartment.areaBruta}</td>
         <td class="px-4 py-3 text-sm text-gray-700">${apartment.areaInterior}</td>
         <td class="px-4 py-3 text-sm text-gray-700">${apartment.estacionamento}</td>
@@ -667,5 +667,7 @@
 
 </body>
 </html>
+
+
 
 
